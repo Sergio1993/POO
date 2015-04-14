@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0630"
+   LastUpgradeVersion = "0610"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "49BE47B31ADC35E600A2085F"
-               BuildableName = "Clase03"
-               BlueprintName = "Clase03"
-               ReferencedContainer = "container:Clase03.xcodeproj">
+               BlueprintIdentifier = "493E9DAF1AB2E0D900033018"
+               BuildableName = "Clase16-punteros3"
+               BlueprintName = "Clase16-punteros3"
+               ReferencedContainer = "container:Clase16-punteros3.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "49BE47B31ADC35E600A2085F"
-            BuildableName = "Clase03"
-            BlueprintName = "Clase03"
-            ReferencedContainer = "container:Clase03.xcodeproj">
+            BlueprintIdentifier = "493E9DAF1AB2E0D900033018"
+            BuildableName = "Clase16-punteros3"
+            BlueprintName = "Clase16-punteros3"
+            ReferencedContainer = "container:Clase16-punteros3.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -48,14 +48,13 @@
       ignoresPersistentStateOnLaunch = "NO"
       debugDocumentVersioning = "YES"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "49BE47B31ADC35E600A2085F"
-            BuildableName = "Clase03"
-            BlueprintName = "Clase03"
-            ReferencedContainer = "container:Clase03.xcodeproj">
+            BlueprintIdentifier = "493E9DAF1AB2E0D900033018"
+            BuildableName = "Clase16-punteros3"
+            BlueprintName = "Clase16-punteros3"
+            ReferencedContainer = "container:Clase16-punteros3.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -67,14 +66,13 @@
       useCustomWorkingDirectory = "NO"
       buildConfiguration = "Release"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "49BE47B31ADC35E600A2085F"
-            BuildableName = "Clase03"
-            BlueprintName = "Clase03"
-            ReferencedContainer = "container:Clase03.xcodeproj">
+            BlueprintIdentifier = "493E9DAF1AB2E0D900033018"
+            BuildableName = "Clase16-punteros3"
+            BlueprintName = "Clase16-punteros3"
+            ReferencedContainer = "container:Clase16-punteros3.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
