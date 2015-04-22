@@ -19,6 +19,7 @@ string mayusculas(string &resp){
 }
 
 int main(int argc, const char * argv[]) {
+    // insert code here...
     
     //TAREA 1
     bool lamparaEnchufada = true;
