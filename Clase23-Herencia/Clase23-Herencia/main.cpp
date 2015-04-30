@@ -17,24 +17,44 @@ protected:
 
 class Cuadrilatero : public Figura{
     
-protected:
-    int static areaRectangulo(int a, int b){
-        
-        double area;
-        area = a * b;
-        
-        return area;
-    }
 };
 
 class Triangulo : public Figura{
     
 };
 
-int main(int argc, const char * argv[]) {
-    Cuadrilatero rectangulo;
+class Rectangulo : public Cuadrilatero{
     
-    Figura triangulo;
+protected:
+    
+    double static areaRectangulo(int base, int altura){
+        
+        double area;
+        area = base * altura;
+        
+        return area;
+    }
+};
+
+int main(int argc, const char * argv[]) {
+    
+    Cuadrilatero cuadrilatero;
+    
+    //cuadrilatero.id = 1;
+    
+    Triangulo triangulo;
+    
+    Rectangulo rectangulo;
+    
+    int base, altura;
+    
+    cout << "dame la altura del cuadrado" << endl;
+    cin >> altura;
+    
+    cout << "dame la base del cuadrado" << endl;
+    cin >> base;
+    
+    cout << rectangulo.areaRectangulo(base, altura) << endl;
     
     return 0;
 }
