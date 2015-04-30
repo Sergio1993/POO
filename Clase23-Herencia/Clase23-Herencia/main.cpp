@@ -7,8 +7,34 @@
 //
 
 #include <iostream>
+using namespace std;
+
+class Figura {
+    
+protected:
+    string id;
+};
+
+class Cuadrilatero : public Figura{
+    
+protected:
+    int static areaRectangulo(int a, int b){
+        
+        double area;
+        area = a * b;
+        
+        return area;
+    }
+};
+
+class Triangulo : public Figura{
+    
+};
 
 int main(int argc, const char * argv[]) {
+    Cuadrilatero rectangulo;
+    
+    Figura triangulo;
     
     return 0;
 }
