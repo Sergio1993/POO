@@ -66,7 +66,7 @@ int main(int argc, const char * argv[]) {
                 contadorIdFactura++;
                 break;
             case 8:
-                exit(0);
+                break;
             default:
                 cout << "Opcion incorrecta" << endl;
                 break;
@@ -74,5 +74,6 @@ int main(int argc, const char * argv[]) {
         cout << "desea continuar si/no" << endl;
         cin >> salir;
     }while(salir == "si");
+    
     return 0;
 }

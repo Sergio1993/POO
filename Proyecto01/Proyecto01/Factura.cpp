@@ -28,8 +28,8 @@ int Factura::getIdentificador() const{
 void Factura::crearFactura(){
     cout << "Dime el numero de factura que deseas crear" << endl;
     cin >> identificador;
-    ofstream myFichero("factura"+to_string(getIdentificador())+".txt", ios::app);
-    myFichero << "FACTURA ";
+    ofstream myFichero("factura.csv", ios::app);
+    myFichero << "FACTURA ";//PASAR AL METODO CREAR FACTURA EL NOMBRE DEL SEÑOR QUE VA A CREAR LA FACTURA
     myFichero << getIdentificador();
     myFichero << "\n";
     myFichero << "prueba\n";
@@ -39,9 +39,7 @@ void Factura::crearFactura(){
 
 void Factura::leerFactura(){
     string valores;
-    cout << "Dime el numero de factura que deseas leer" << endl;
-    cin >> identificador;
-    ifstream myFichero2("factura"+to_string(getIdentificador())+".txt");
+    ifstream myFichero2("factura.csv");
     if (myFichero2.is_open())
     {
         while ( getline (myFichero2, valores) )
@@ -51,7 +49,7 @@ void Factura::leerFactura(){
         myFichero2.close();
     }
     
-    else cout << "Imposible abrir archivo";
+    else cout << "Imposible abrir archivo\n";
     myFichero2.close();
 }
 

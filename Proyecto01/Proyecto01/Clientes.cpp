@@ -56,13 +56,13 @@ int Clientes::getEdad() const{
 void Clientes::crearClientes(){
      string valores, nombre, apellido, dni, fecha, respuesta;
     
-     ofstream myFichero("clientes.txt", ios::app);
+     ofstream myFichero("clientes.csv", ios::app);
      
      if (myFichero.is_open())
      {
      cout << "Dame tu nombre" << endl;
      cin >> nombre;
-     myFichero << nombre << ", ";
+     myFichero << nombre << " ";
      cout << "Dame tu primer apellido" << endl;
      cin >> apellido;
      myFichero << apellido << ", ";

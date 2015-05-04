@@ -13,6 +13,16 @@ class Figura {
     
 protected:
     string id;
+    
+public:
+    
+    string getId() const {
+        return id;
+    }
+    
+    void setId(string id){
+        this->id = id;
+    }
 };
 
 class Cuadrilatero : public Figura{
@@ -25,26 +35,34 @@ class Triangulo : public Figura{
 
 class Rectangulo : public Cuadrilatero{
     
-protected:
+public:
     
-    double static areaRectangulo(int base, int altura){
+    static double areaRectangulo(int base, int altura){
         
         double area;
+        
         area = base * altura;
         
         return area;
     }
+
 };
 
 int main(int argc, const char * argv[]) {
     
     Cuadrilatero cuadrilatero;
     
-    //cuadrilatero.id = 1;
+    cuadrilatero.setId("Cuadrilatero 1");
     
     Triangulo triangulo;
     
+    triangulo.setId("Triangulo 1");
+    
     Rectangulo rectangulo;
+    
+    rectangulo.setId("rectangulo 1");
+    
+    
     
     int base, altura;
     
@@ -54,7 +72,7 @@ int main(int argc, const char * argv[]) {
     cout << "dame la base del cuadrado" << endl;
     cin >> base;
     
-    cout << rectangulo.areaRectangulo(base, altura) << endl;
+    cout << Rectangulo::areaRectangulo(base, altura) << endl;
     
     return 0;
 }
