@@ -7,9 +7,28 @@
 //
 
 #include <iostream>
+using namespace std;
+
+class Coche{
+    
+    Coche(int date){
+        
+    }
+    ~Coche(){}
+};
+
+class Vw : public Coche{
+    
+};
+
+class Toyota : public Coche{
+    
+};
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    Vw vw;
+    
+    
+    
     return 0;
 }

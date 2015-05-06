@@ -72,7 +72,7 @@ int main(int argc, const char * argv[]) {
     cout << "dame la base del cuadrado" << endl;
     cin >> base;
     
-    cout << Rectangulo::areaRectangulo(base, altura) << endl;
+    Rectangulo::areaRectangulo(base, altura);
     
     return 0;
 }
