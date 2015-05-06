@@ -9,6 +9,8 @@
 #include <iostream>
 using namespace std;
 
+//TAREA 0
+/*
 class Coche{
 public:
     Coche(){}
@@ -38,6 +40,13 @@ int main(int argc, const char * argv[]) {
     Vw vw(0);
     
     Toyota toyota;
+    
+    return 0;
+}*/
+
+int main(int argc, const char * argv[]) {
+    
+    
     
     return 0;
 }
