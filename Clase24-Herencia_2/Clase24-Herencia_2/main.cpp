@@ -10,25 +10,34 @@
 using namespace std;
 
 class Coche{
-    
+public:
+    Coche(){}
     Coche(int date){
-        
+        cout << "Constructo de coche" << endl;
     }
     ~Coche(){}
 };
 
 class Vw : public Coche{
     
+public:
+    
+    Vw(int date) : Coche(date){
+        cout << "constructor de Vw" << endl;
+    }
 };
 
 class Toyota : public Coche{
     
+public:
+    Toyota(){}
 };
 
 int main(int argc, const char * argv[]) {
-    Vw vw;
     
+    Vw vw(0);
     
+    Toyota toyota;
     
     return 0;
 }
