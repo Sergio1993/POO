@@ -44,6 +44,57 @@ int main(int argc, const char * argv[]) {
     return 0;
 }*/
 
+//TAREA 1
+class Figure{
+public:
+    Figure(){}
+    ~Figure(){}
+};
+
+class OpenFigure : Figure{
+public:
+    OpenFigure(){}
+    ~OpenFigure(){}
+};
+
+class Line : OpenFigure{
+public:
+    Line(){}
+    ~Line(){}
+};
+
+class ClosedFigure : Figure{
+    
+};
+
+class Polygon: ClosedFigure{
+    
+};
+
+class Eclipse : ClosedFigure{
+    
+};
+
+class Circle : Eclipse{
+    
+};
+
+class Triangle : Polygon{
+    
+};
+
+class Rectangle : Polygon{
+    
+};
+
+class Hexagon : Polygon{
+    
+};
+
+class Square : Rectangle{
+    
+};
+
 int main(int argc, const char * argv[]) {
     
     
