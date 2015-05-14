@@ -64,39 +64,56 @@ public:
 };
 
 class ClosedFigure : Figure{
-    
+public:
+    ClosedFigure(){}
 };
 
 class Polygon: ClosedFigure{
-    
+public:
+    Polygon(){}
 };
 
 class Eclipse : ClosedFigure{
-    
+public:
+    Eclipse(){}
 };
 
 class Circle : Eclipse{
-    
+public:
+    Circle(){}
 };
 
 class Triangle : Polygon{
-    
+public:
+    Triangle(){}
 };
 
 class Rectangle : Polygon{
-    
+public:
+    Rectangle(){}
 };
 
 class Hexagon : Polygon{
-    
+public:
+    Hexagon(){}
 };
 
 class Square : Rectangle{
-    
+public:
+    Square(){}
 };
 
 int main(int argc, const char * argv[]) {
     
+    OpenFigure open1;
+    Line line;
+    ClosedFigure cf;
+    Polygon poly;
+    Eclipse eclipse;
+    Circle circle;
+    Triangle tri;
+    Hexagon hexa;
+    Square square;
     
     
     return 0;
