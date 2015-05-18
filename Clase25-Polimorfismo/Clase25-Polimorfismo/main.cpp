@@ -11,6 +11,7 @@ using namespace std;
 
 class Instrument{
 public:
+    Instrument(){}
     virtual void play(){
         cout << "Clase Instrument, método play" << endl;
     }
@@ -22,6 +23,7 @@ public:
 
 class Wind : public Instrument{
 public:
+    Wind() : Instrument() {}
     void play(){
         cout << "Clase Wind, método play" << endl;
     }
@@ -33,6 +35,7 @@ public:
 
 class Percussion : public Instrument{
 public:
+    Percussion(){}
     void play(){
         cout << "Clase Percussion, método play" << endl;
     }
@@ -44,6 +47,7 @@ public:
 
 class Stringed : public Instrument{
 public:
+    Stringed(){}
     void play(){
         cout << "Clase Stringed, método play" << endl;
     }
@@ -55,6 +59,7 @@ public:
 
 class Woodwind : public Wind{
 public:
+    Woodwind(){}
     void play(){
         cout << "Clase Woodwind, método play" << endl;
     }
@@ -63,6 +68,7 @@ public:
 
 class Brass : public Wind{
 public:
+    Brass(){}
     void play(){
         cout << "Clase Brass, método play" << endl;
     }
@@ -71,20 +77,20 @@ public:
 
 int main(int argc, const char * argv[]) {
     
-    Instrument *wind = new Wind;
-    Instrument *percussion = new Percussion;
-    Instrument *stringed = new Stringed;
-    Instrument *woodwind = new Woodwind;
-    Instrument *brass = new Brass;
+    Instrument *instrumetWind = new Wind();
+    Instrument *percussion = new Percussion();
+    Instrument *stringed = new Stringed();
+    Instrument *woodwind = new Woodwind();
+    Instrument *brass = new Brass();
     
-    wind->play();
+    instrumetWind->play();
     percussion->play();
     stringed->play();
     woodwind->play();
     brass->play();
     
     
-    delete wind;
+    delete instrumetWind;
     delete percussion;
     delete stringed;
     delete woodwind;
