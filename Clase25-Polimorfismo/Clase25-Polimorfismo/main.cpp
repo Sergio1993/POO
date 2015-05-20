@@ -15,7 +15,7 @@ public:
     virtual void play(){
         cout << "Clase Instrument, método play" << endl;
     }
-    virtual char* what();
+    char* what();
     virtual void adjust(){
         cout << "Clase Instrument, método adjust" << endl;
     }
@@ -23,7 +23,7 @@ public:
 
 class Wind : public Instrument{
 public:
-    Wind() : Instrument() {}
+    Wind(){}
     void play(){
         cout << "Clase Wind, método play" << endl;
     }
@@ -83,11 +83,20 @@ int main(int argc, const char * argv[]) {
     Instrument *woodwind = new Woodwind();
     Instrument *brass = new Brass();
     
+    cout << "=============PLAY=============" << endl;
     instrumetWind->play();
     percussion->play();
     stringed->play();
     woodwind->play();
     brass->play();
+    
+    cout << "=============ADJUST=============" << endl;
+    
+    instrumetWind->adjust();
+    percussion->adjust();
+    stringed->adjust();
+    woodwind->adjust();
+    brass->adjust();
     
     
     delete instrumetWind;
