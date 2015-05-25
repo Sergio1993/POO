@@ -77,6 +77,8 @@ public:
 
 int main(int argc, const char * argv[]) {
     
+    //1 FORMA
+    /*
     Instrument *instrumetWind = new Wind();
     Instrument *percussion = new Percussion();
     Instrument *stringed = new Stringed();
@@ -104,6 +106,24 @@ int main(int argc, const char * argv[]) {
     delete stringed;
     delete woodwind;
     delete brass;
+    */
     
+    //2 FORMA MEJORADO
+    Instrument *inst[] = {new Wind(), new Percussion(), new Stringed(), new Woodwind(), new Brass()};
+    
+    cout << "=============PLAY=============" << endl;
+    for (int i = 0; i<5; i++){
+        inst[i]->play();
+    }
+    
+    cout << "=============ADJUST=============" << endl;
+    
+    for (int i = 0; i<5; i++){
+        inst[i]->adjust();
+    }
+    
+    for (int i = 0; i<5; i++){
+        delete inst[i];
+    }
     return 0;
 }
