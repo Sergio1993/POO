@@ -26,13 +26,23 @@ int Factura::getIdentificador() const{
 }
 
 void Factura::crearFactura(){
+    
+    double importe;
+    
     cout << "Dime el numero de factura que deseas crear" << endl;
     cin >> identificador;
     ofstream myFichero("factura.csv", ios::app);
     myFichero << "FACTURA ";//PASAR AL METODO CREAR FACTURA EL NOMBRE DEL SEÑOR QUE VA A CREAR LA FACTURA
     myFichero << getIdentificador();
     myFichero << "\n";
-    myFichero << "prueba\n";
+    cout << "Dame el importe de la factura" << endl;
+    cin >> importe;
+    myFichero << "Importe = ";
+    myFichero << importe << "\n";
+    myFichero << "Importe + IVA = ";
+    importe = importe + importe*0.21;
+    myFichero << importe;
+    myFichero << "\n";
     myFichero.close();
     cout << "La factura ha sido creada" << endl;
 }

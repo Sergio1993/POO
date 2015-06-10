@@ -14,19 +14,26 @@ Clientes::Clientes(){
     
 }
 
-Clientes::Clientes(string n, string a, string d, int e){
+Clientes::Clientes(int id, string n, string a, string d, int e){
+    this->identificador = id;
     this->nombre = n;
     this->apellidos = a;
     this->dni = d;
     this->edad = e;
 }
+void Clientes::setId(int id){
+    this->identificador = id;
+}
 
+int Clientes::getId() const {
+    return this->identificador;
+}
 void Clientes::setNombre(string n){
     this->nombre = n;
 }
 
 string Clientes::getNombre() const{
-    return this->getNombre();
+    return this->nombre;
 }
 
 void Clientes::setApellidos(string a){
@@ -54,31 +61,38 @@ int Clientes::getEdad() const{
 }
 
 void Clientes::crearClientes(){
-     string valores, nombre, apellido, dni, fecha, respuesta;
     
-     ofstream myFichero("clientes.csv", ios::app);
-     
-     if (myFichero.is_open())
-     {
-     cout << "Dame tu nombre" << endl;
-     cin >> nombre;
-     myFichero << nombre << " ";
-     cout << "Dame tu primer apellido" << endl;
-     cin >> apellido;
-     myFichero << apellido << ", ";
-     cout << "Dame tu dni" << endl;
-     cin >> dni;
-     myFichero << dni << ", ";
-     cout << "Dame tu fecha de nacimiento" << endl;
-     cin >> fecha;
-     myFichero << fecha << "\n";
+    string valores, nombre, apellido, dni, fecha, respuesta;
+    int identificador = 0;
+    
+    ofstream myFichero("clientes.csv", ios::app);
+    
+    if (myFichero.is_open()){
+        cout << "Dame un identificador para el cliente" << endl;
+        cin >> identificador;
+        myFichero << "Cliente";
+        myFichero << identificador << " ";
+        myFichero << "\n";
+        cout << "Dame tu nombre" << endl;
+        cin >> nombre;
+        myFichero << nombre << " ";
+        cout << "Dame tu primer apellido" << endl;
+        cin >> apellido;
+        myFichero << apellido << ", ";
+        cout << "Dame tu dni" << endl;
+        cin >> dni;
+        myFichero << dni << ", ";
+        cout << "Dame tu fecha de nacimiento" << endl;
+        cin >> fecha;
+        myFichero << fecha << "\n";
      }
      else cout << "Imposible abrir archivo";
 }
 
 void Clientes::listarClientes(){
+    
     string valores;
-    ifstream myFichero2 ("clientes.txt");
+    ifstream myFichero2 ("clientes.csv");
     if (myFichero2.is_open())
     {
         while ( getline (myFichero2, valores) )
@@ -92,4 +106,21 @@ void Clientes::listarClientes(){
     myFichero2.close();
 
 }
+
+void Clientes::anadirClientesFacturas(){
+    string valores;
+    ifstream myFichero2 ("clientes.csv");
+    if (myFichero2.is_open())
+    {
+        while ( getline (myFichero2, valores, ' ') )
+        {
+            cout << valores << '\n';
+        }
+        myFichero2.close();
+    }
+    
+    else cout << "Imposible abrir archivo";
+    myFichero2.close();
+}
+
 Clientes::~Clientes(){}

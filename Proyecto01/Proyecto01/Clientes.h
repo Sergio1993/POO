@@ -17,12 +17,12 @@ class Clientes{
     
 private:
     string nombre, apellidos, dni;
-    int edad;
+    int identificador, edad;
     
 public:
     
     Clientes();
-    Clientes(string, string, string, int);
+    Clientes(int ,string, string, string, int);
     
     
     void setNombre(string);
@@ -36,6 +36,9 @@ public:
     
     void setEdad(int);
     int getEdad() const;
+    
+    void setId(int);
+    int getId() const;
     
     void crearClientes();
     void guardarClientes();

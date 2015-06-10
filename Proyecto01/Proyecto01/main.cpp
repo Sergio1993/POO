@@ -16,7 +16,7 @@ using namespace std;
 int main(int argc, const char * argv[]) {
     
     int respuesta;
-    int contadorIdFactura = 0;
+    //int contadorIdFactura = 0;
     string salir;
     
     do{
@@ -45,7 +45,7 @@ int main(int argc, const char * argv[]) {
                 factura.crearFactura();
                 break;
             case 2:
-                cout << "2" << endl;
+                cout << "FACTURA GUARDADA" << endl;
                 break;
             case 3:
                 factura.leerFactura();
@@ -54,18 +54,16 @@ int main(int argc, const char * argv[]) {
                 clientes.crearClientes();
                 break;
             case 5:
-                cout << "5" << endl;
-                contadorIdFactura++;
+                cout << "CLIENTE GUARDADO" << endl;
                 break;
             case 6:
                 clientes.listarClientes();
-                contadorIdFactura++;
                 break;
             case 7:
-                cout << "7" << endl;
-                contadorIdFactura++;
+                clientes.anadirClientesFacturas();
                 break;
             case 8:
+                exit(1);
                 break;
             default:
                 cout << "Opcion incorrecta" << endl;
